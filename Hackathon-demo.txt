@@ -1,0 +1,16 @@
+1) problem statement: AI cognitive tool for product advertisement (VW Tiguan). We have used Watson super computer conversation service for setting up the premise of the chatbot. 
+Handled pain areas like,
+1) Human interference for Service centre/ showroom inquiries.
+2) Booking test rides.
+3) cover maximum features of the product to avoid service calls to VW call centre.
+4) removes dependency on human training (attrition, fatigue etc).
+5) feedback capturing and chat history repository for analytics and training.
+	- chat ends with a feedback form (One click, select and go option, no wordings required)
+	- chat history and feedback is recorded, counted and segregated based on 4 emotions (happy, neutral, dis-satisfied and angry). This can be used for analytics and improvement of chatbot.
+    - chat history can also be used to determine if any improvements to tiguan can be implemented. example, if there are x number of users enquiring a feature that tiguan does not have, then the feedback can be passed to product design team.
+6) The architecture is fault tolerant, scalable, light-weight
+	- FT as any questions which are not handled, will provide reply as "Not Understood" on UI and record the instance for further training.
+	- light weight: we have used the acceptable limits of Watson conversation lite (intents, entities) and handled the rest in calling module.
+	- the intents have a linear progression structure where each context has been added as separate node (example, engine being context, every feature of the engine can be accomodated in one entity, so if new feature have to be added, it can be added to the entity)
+1) UI Demo: 
+	1) 
